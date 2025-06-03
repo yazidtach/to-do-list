@@ -4,7 +4,7 @@ renderToDoList()
 
 function renderToDoList(){
     let toDoHtml = ''
-    
+
     for(let i =0; i < toDoList.length; i++){
         const toDo = toDoList[i]
 
@@ -23,7 +23,8 @@ function renderToDoList(){
 
 function addToDo(){
     let inputElement = document.querySelector('.js-input')
-    toDoList.push(inputElement.value)
+    let inputDateElement = document.querySelector('.js-date-input')
+    toDoList.push(inputElement.value, inputDateElement.value)
    inputElement.value = ''
    renderToDoList()
 }
